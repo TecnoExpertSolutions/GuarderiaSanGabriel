@@ -1,0 +1,42 @@
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF; /* Blanco */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Mostrar el menú cuando se pasa el cursor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Evitar que desaparezca el menú cuando se hace hover en las opciones */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Evitar que el submenú desaparezca cuando se hace hover en él */
+.dropdown:hover .dropdown-content {
+    display: block;
+    pointer-events: all;  /* Permite que el menú siga interactuando incluso cuando el cursor se mueve hacia las opciones */
+}
+
+.dropdown-content:hover {
+    pointer-events: all; /* Evita que el menú desaparezca cuando el cursor esté sobre el submenú */
+}
