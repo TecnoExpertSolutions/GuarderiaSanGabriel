@@ -1,0 +1,12 @@
+# --- CREAR TABLA DE EGRESOS ---
+def crear_tabla_egresos():
+    c.execute('''CREATE TABLE IF NOT EXISTS egresos (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nino_id INTEGER,
+        fecha DATE,
+        notas TEXT,
+        FOREIGN KEY (nino_id) REFERENCES ninos(id)
+    )''')
+    conn.commit()
+
+crear_tabla_egresos()
